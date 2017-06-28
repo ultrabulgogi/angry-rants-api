@@ -1,1 +1,10 @@
-language: javascript
+language: node_js
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-west-2"
+  app: "angry-rants-api"
+  env: "angryRantsApi-env"
+  bucket_name: "elasticbeanstalk-us-west-2-060282366576"
